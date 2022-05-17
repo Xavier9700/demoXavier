@@ -1,4 +1,5 @@
 <template>
+  <h1>Bonjour le monde</h1>
   <q-page class="flex flex-center">
     <img
       alt="Quasar logo"
