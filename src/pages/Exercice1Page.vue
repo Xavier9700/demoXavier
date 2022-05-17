@@ -82,8 +82,8 @@ export default defineComponent({
   name: 'Exercice1Page',
   data () {
     return {
-      name: 'Xavier',
-      age: '24'
+      name: '',
+      age: ''
     }
   },
   // Création des propriétés calculés, elles activent dès qu'il y a eu une modification
@@ -107,7 +107,12 @@ export default defineComponent({
     randomNoms () {
       this.name = noms[Math.ceil(Math.random() * noms.length)]
       this.age = Math.ceil(Math.random() * 100)
+      // this.age = parseInt(Math.random() * 100) + 1
     }
+  },
+  // Méthode qui est appelée dès que la page est chargée
+  mounted () {
+    this.randomNoms()
   }
 })
 </script>
